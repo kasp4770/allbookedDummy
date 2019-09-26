@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kasp4770/allbookedDummy/issues"
   },
-  "homepage": "https://github.com/kasp4770/allbookedDummy#readme"
+  "homepage": "https://github.com/kasp4770/allbookedDummy#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
