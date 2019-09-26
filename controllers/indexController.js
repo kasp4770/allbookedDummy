@@ -26,6 +26,7 @@ exports.index = (req, res) => {
     res.json(object);
 }
 
-exports.getAll = (req, res) => {
+exports.getSearch = (req, res) => {
+    console.log(req.params.Y + " " + req.params.X);
 }
 
