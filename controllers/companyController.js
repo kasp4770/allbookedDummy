@@ -12,3 +12,5 @@ exports.addAmenity = (req, res) => {
     })
 }
 
+
+

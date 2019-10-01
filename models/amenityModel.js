@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
 
     const Amenity = sequelize.define('Amenity', {
-        name: {
+        /*id: {
             primaryKey: true,
-            type: DataTypes.STRING
-        },
-        companyId: {
             type: DataTypes.INTEGER
+        },*/
+        name: {
+            type: DataTypes.STRING
         },
     }, {
         timestamps: false

@@ -23,7 +23,7 @@ db.companies = require('../models/companyModel.js')(sequelize, Sequelize);
 db.amenities = require('../models/amenityModel.js')(sequelize, Sequelize);
 
 //Relations
-db.companies.belongsToMany(db.amenities, {through: 'companyAmenities', foreignKey: 'name'});
-db.amenities.belongsToMany(db.companies, {through: 'companyAmenities', foreignKey: 'amenitiesId'});
+db.companies.belongsToMany(db.amenities, {through: 'companyAmenities'});
+db.amenities.belongsToMany(db.companies, {through: 'companyAmenities'});
 
 module.exports = db;
