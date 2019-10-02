@@ -7,13 +7,13 @@ exports.list = (req, res) => {
 
     db.companies.findAll({
         include: [{ model: db.amenities, raw: true }]
-    }).then(companies => {
+    })/*.then(companies => {
 
         obj = companies.forEach(element => {
             
         });
 
-    })
+    })*/
 
 
 
