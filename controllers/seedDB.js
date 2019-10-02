@@ -26,7 +26,7 @@ var companyData = [
         lowestPrice: 89.00,
         rating: 3.7,
         noOfReviews: 9
-    }, 
+    },
     {
         name: "Zleep Hotel Kalundborg",
         address: "Klintedalsvej 60",
@@ -39,7 +39,7 @@ var companyData = [
         lowestPrice: 449.95,
         rating: 0.0,
         noOfReviews: 0
-    }, 
+    },
     {
         name: "Holiday home Slagelse",
         address: "Mullerup Strandvej 13",
@@ -52,7 +52,7 @@ var companyData = [
         lowestPrice: 120.00,
         rating: 3.1,
         noOfReviews: 15
-    }, 
+    },
     {
         name: "Comwell Sorø",
         address: "Abildvej 100",
@@ -65,7 +65,7 @@ var companyData = [
         lowestPrice: 399.00,
         rating: 5.0,
         noOfReviews: 112
-    }, 
+    },
     {
         name: "Hørhaven B&B",
         address: "Hørhavevej 1",
@@ -78,20 +78,20 @@ var companyData = [
         lowestPrice: 180.00,
         rating: 4.5,
         noOfReviews: 51
-    }, 
+    },
     {
         name: "Sorø Camping & Cottages",
         address: "Udbyhøjvej 10",
         zip: "4180",
         city: "Sorø",
-        latitudeY: 0.0,
-        longitudeX: 0.0,
+        latitudeY: 55.4461083688888,
+        longitudeX: 11.54583418,
         accommodationType: "Camping",
         companyStars: 2.0,
         lowestPrice: 20.00,
         rating: 1.5,
         noOfReviews: 230
-    }, 
+    },
     {
         name: "Fredens Hus",
         address: "Krøjerup Overdrev 16",
@@ -104,7 +104,7 @@ var companyData = [
         lowestPrice: 250.00,
         rating: 3.8,
         noOfReviews: 56
-    }, 
+    },
     {
         name: "Hotel Kirstine",
         address: "Købmagergade 20",
@@ -117,7 +117,7 @@ var companyData = [
         lowestPrice: 699.95,
         rating: 5.0,
         noOfReviews: 542
-    }, 
+    },
     {
         name: "Engly Bed & Breakfast",
         address: "Gadevang 23",
@@ -130,7 +130,7 @@ var companyData = [
         lowestPrice: 140.00,
         rating: 3.8,
         noOfReviews: 28
-    }, 
+    },
     {
         name: "De Hvide Svaner Camping",
         address: "Karrebækvej 741",
@@ -143,7 +143,7 @@ var companyData = [
         lowestPrice: 80.00,
         rating: 2.5,
         noOfReviews: 2
-    }, 
+    },
     {
         name: "Feddet Camping & Cottages",
         address: "Feddet 12",
@@ -156,7 +156,7 @@ var companyData = [
         lowestPrice: 10.00,
         rating: 4.0,
         noOfReviews: 46
-    }, 
+    },
     {
         name: "Hotel Sørup Herregaard",
         address: "Sørupvej 26",
@@ -169,7 +169,7 @@ var companyData = [
         lowestPrice: 600.00,
         rating: 5.0,
         noOfReviews: 532
-    }, 
+    },
     {
         name: "Scandic Ringsted",
         address: "Nørretorv 57",
@@ -182,7 +182,7 @@ var companyData = [
         lowestPrice: 189.00,
         rating: 3.3,
         noOfReviews: 56
-    }, 
+    },
     {
         name: "Hyggestuen B&B gallerí",
         address: "Holbækvej 103",
@@ -195,7 +195,7 @@ var companyData = [
         lowestPrice: 59.00,
         rating: 2.0,
         noOfReviews: 78
-    }, 
+    },
     {
         name: "Bromølle Kro",
         address: "Slagelsevej 78",
@@ -208,7 +208,7 @@ var companyData = [
         lowestPrice: 100.00,
         rating: 2.6,
         noOfReviews: 15
-    }, 
+    },
     {
         name: "Rosengården",
         address: "Kirkemosevej 13",
@@ -221,7 +221,7 @@ var companyData = [
         lowestPrice: 80.00,
         rating: 1.9,
         noOfReviews: 2
-    }, 
+    },
     {
         name: "Højby Kro og Hotel",
         address: "Højby Hovedgade 28",
@@ -234,7 +234,7 @@ var companyData = [
         lowestPrice: 450.00,
         rating: 5.0,
         noOfReviews: 59
-    }, 
+    },
     {
         name: "Skortskær B&B",
         address: "Skortskær 2",
@@ -247,7 +247,7 @@ var companyData = [
         lowestPrice: 100.00,
         rating: 3.4,
         noOfReviews: 20
-    }, 
+    },
     {
         name: "HotelPandekagehuset",
         address: "Algade 37",
@@ -261,12 +261,115 @@ var companyData = [
         rating: 2.4,
         noOfReviews: 14
     }];
+var amenityData = [
+    {
+        name: "Pool udendørs"
+    },
+    {
+        name: "Pool indendørs"
+    },
+    {
+        name: "Vandrutsjebane"
+    },
+    {
+        name: "Strandudlejning"
+    },
+    {
+        name: "Poolbar"
+    },
+    {
+        name: "Nudist Strand"
+    },
+    {
+        name: "Badestrand"
+    },
+    {
+        name: "Transportudlejning"
+    },
+    {
+        name: "Morgenbuffet"
+    },
+    {
+        name: "Frokostbuffet"
+    },
+    {
+        name: "All Inclusive"
+    },
+    {
+        name: "Fitness"
+    },
+    {
+        name: "Minigolf"
+    },
+    {
+        name: "Golf"
+    },
+    {
+        name: "Tennis"
+    },
+    {
+        name: "Legeplads 0+"
+    },
+    {
+        name: "Legeplads 6+"
+    },
+    { 
+        name: "Legeplads 12+"
+    },
+    {
+        name: "Legeplads"
+    },
+    {
+        name: "Vandreruter"
+    },
+    {
+        name: "Skov"
+    },
+    { 
+        name: "Trænings coach"
+    },
+    {
+        name: "Hold træning"
+    },
+    {
+        name: "Scene"
+    },
+    {
+        name: "Underholdning"
+    },
+    {
+        name: "Familievenligt"
+    },
+    {
+        name: "Bar"
+    }
+];
 
-//Bulk create companies. Not tried or tested!
 exports.seed = (req, res) => {
-    db.sequelize.sync().then(() => {
-        db.companies.create(companyData)
-    }).then(() => {
-        return db.companies.findAll();
-    })
+    
+    db.amenities.bulkCreate(amenityData);
+    
+    db.companies.bulkCreate(companyData)
+        .then(company => {
+            company[0].addAmenities([5, 6, 16, 20]);
+            company[1].addAmenities([1, 6, 20, 22]);
+            company[2].addAmenities([2, 4, 5, 9, 11]);
+            company[3].addAmenities([2, 5, 11, 26]);
+            company[4].addAmenities([4, 7, 13, 18]);
+            company[5].addAmenities([5, 9, 14, 15]);
+            company[6].addAmenities([7, 13, 16, 17]);
+            company[7].addAmenities([1, 2, 3, 4, 6, 9, 10, 11]);
+            company[8].addAmenities([5, 6, 16, 20]);
+            company[9].addAmenities([1, 6, 20, 22]);
+            company[10].addAmenities([2, 4, 5, 9, 11]);
+            company[11].addAmenities([2, 5, 11, 26]);
+            company[12].addAmenities([4, 7, 13, 18]);
+            company[13].addAmenities([5, 9, 14, 15]);
+            company[14].addAmenities([7, 13, 16, 17]);
+            company[15].addAmenities([1, 2, 3, 4, 6, 9, 10, 11]);
+            company[16].addAmenities([2, 4, 5, 9, 11]);
+            company[17].addAmenities([2, 5, 11, 26]);
+            company[18].addAmenities([4, 7, 13, 18]);
+            company[19].addAmenities([2, 4, 5, 9, 11]);
+        })
 }

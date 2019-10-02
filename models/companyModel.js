@@ -22,11 +22,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         latitudeY: {
-            type: DataTypes.DECIMAL(9, 6),
+            type: DataTypes.DOUBLE,
             allowNull: false
         },
         longitudeX: {
-            type: DataTypes.DECIMAL(9, 6),
+            type: DataTypes.DOUBLE,
             allowNull: false
         },
         accommodationType: {
