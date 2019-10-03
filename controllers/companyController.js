@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const geolib = require('geolib');
 
 exports.list = (req, res) => {
     db.companies.findAll({
@@ -6,6 +7,27 @@ exports.list = (req, res) => {
     }).then(companies => {
         res.json(companyListToPreferedStructure(companies));
     })
+}
+
+exports.findByLocation = (req, res) => {
+
+    const y = req.params.Y;
+    const x = req.params.X;
+
+    db.companies.findAll({
+        include: [{model: db.amenities, raw: true }]
+    }).then(companies => {
+        //res.json(companiesWithinRadius(companies, x, y));
+        //TEST
+        res.json(companiesWithinRadius(companies, 11.215672, 55.504689))
+    })
+
+    /*db.companies.findAll({
+        where: 
+        include: [{model: db.amenities, raw: true}]
+    }).then(companies => {
+        res.json(companyListToPreferedStructure(companies));
+    })*/
 }
 
 //Omstrukturerer JSON således at amenity-array'et består af strings istedet for objekter
@@ -40,3 +62,18 @@ function companyListToPreferedStructure(list) {
     }
     return newCompanyList;
 }
+
+function companiesWithinRadius(list, geoX, geoY){
+    var newCompanyList = [];
+    for(let i = 0; i < list.length; i ++){
+        if(geolib.isPointWithinRadius(
+            {latitude: list[i].latitudeY, longitude: list[i].longitudeX},
+            {latitude: geoY, longitude: geoX},
+            15000
+        ) == true){
+            newCompanyList.push(list[i])
+        }
+    }
+    return companyListToPreferedStructure(newCompanyList);
+}
+

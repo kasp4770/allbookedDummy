@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kasp4770/allbookedDummy#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "geolib": "^3.0.4",
     "json": "^9.0.6",
     "nodemon": "^1.19.2",
     "path": "^0.12.7",

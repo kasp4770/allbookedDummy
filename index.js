@@ -29,5 +29,3 @@ app.use('/company', companyRouter);
 db.sequelize.sync().then(() => {
     app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 });
-
-
