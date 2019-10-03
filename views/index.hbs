@@ -4,7 +4,13 @@
 <p>{{name}}</p>
 <p>{{type}}</p>
 <p>{{rating}}</p>
-<p>{{amenities.[1]}}</p>
-<p>{{reviews}}</p>
+{{#each amenities}}
+<span>{{this}}, </span>
+{{/each}}
+<br>
+{{#each reviews}}
+<span>{{this}}</span>
+{{/each}}
+<br>
 <br>
 {{/each}}
