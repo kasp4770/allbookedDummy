@@ -21,13 +21,6 @@ exports.findByLocation = (req, res) => {
         //TEST
         res.json(companiesWithinRadius(companies, 11.215672, 55.504689))
     })
-
-    /*db.companies.findAll({
-        where: 
-        include: [{model: db.amenities, raw: true}]
-    }).then(companies => {
-        res.json(companyListToPreferedStructure(companies));
-    })*/
 }
 
 //Omstrukturerer JSON således at amenity-array'et består af strings istedet for objekter
@@ -69,8 +62,7 @@ function companiesWithinRadius(list, geoX, geoY){
         if(geolib.isPointWithinRadius(
             {latitude: list[i].latitudeY, longitude: list[i].longitudeX},
             {latitude: geoY, longitude: geoX},
-            15000
-        ) == true){
+            15000) == true){
             newCompanyList.push(list[i])
         }
     }
