@@ -30,7 +30,7 @@ var object = [
 
 
 exports.index = (req, res) => {
-    res.json(object);
+    res.render('index', {title: 'indexView', headline: "Fun with Handlebars", obj: object});
 }
 
 exports.getSearch = (req, res) => {

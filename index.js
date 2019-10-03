@@ -18,10 +18,13 @@ db.sequelize
         console.error('Unable to connect to the database: ', err);
     });
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+
 app.use(express.json());
 app.set('json spaces', 2);
 app.use(express.urlencoded({ extended: false }));
-/*app.use(express.static(path.join(__dirname, 'views')));*/
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/company', companyRouter);
