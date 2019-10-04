@@ -19,7 +19,7 @@ exports.findByLocation = (req, res) => {
     db.companies.findAll({
         include: [{model: db.amenities, raw: true }]
     }).then(companies => {
-        res.json(companiesWithinRadius(companies, x, y, 50000));
+        res.json(companiesWithinRadius(companies, x, y, 30000));
         
         //TEST
         //res.json(companiesWithinRadius(companies, 11.215672, 55.504689, 5000))
