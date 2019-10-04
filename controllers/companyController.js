@@ -13,13 +13,16 @@ exports.findByLocation = (req, res) => {
 
     const y = req.params.Y;
     const x = req.params.X;
+    //Mangler optional 'radius' i URL'en:
+    //const radius = req.params.radius;
 
     db.companies.findAll({
         include: [{model: db.amenities, raw: true }]
     }).then(companies => {
-        //res.json(companiesWithinRadius(companies, x, y));
+        res.json(companiesWithinRadius(companies, x, y, 50000));
+        
         //TEST
-        res.json(companiesWithinRadius(companies, 11.215672, 55.504689))
+        //res.json(companiesWithinRadius(companies, 11.215672, 55.504689, 5000))
     })
 }
 
@@ -56,13 +59,17 @@ function companyListToPreferedStructure(list) {
     return newCompanyList;
 }
 
-function companiesWithinRadius(list, geoX, geoY){
+function companiesWithinRadius(list, geoX, geoY, radiusDistance){
+    if(radiusDistance == undefined){
+        radiusDistance = 30000;
+    }
+
     var newCompanyList = [];
     for(let i = 0; i < list.length; i ++){
         if(geolib.isPointWithinRadius(
             {latitude: list[i].latitudeY, longitude: list[i].longitudeX},
             {latitude: geoY, longitude: geoX},
-            15000) == true){
+            radiusDistance) == true){
             newCompanyList.push(list[i])
         }
     }
