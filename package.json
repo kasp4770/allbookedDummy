@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/kasp4770/allbookedDummy#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "geolib": "^3.0.4",
     "hbs": "^4.0.5",
     "json": "^9.0.6",
